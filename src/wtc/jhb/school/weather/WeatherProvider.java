@@ -11,8 +11,8 @@ public class WeatherProvider {
     }
 
     public static WeatherProvider getProvider() {
-       WeatherProvider gtProvider = new WeatherProvider("linda", 89989);
-       return gtProvider;
+//       WeatherProvider gtProvider = new WeatherProvider("linda", 89989);
+//       return gtProvider;
     }
 
     public String getCurrentWeather(Coordinates coordinates) {

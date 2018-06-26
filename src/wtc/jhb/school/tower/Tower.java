@@ -4,7 +4,7 @@ import wtc.jhb.school.simulator.IFlyable;
 
 import java.util.ArrayList;
 
-public class Tower {
+public class Tower implements IFlyable{
     private ArrayList<IFlyable> observe;
 
     public void register(IFlyable flyable) {
