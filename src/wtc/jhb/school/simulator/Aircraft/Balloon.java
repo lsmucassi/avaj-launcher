@@ -3,7 +3,7 @@ package wtc.jhb.school.simulator.Aircraft;
 import wtc.jhb.school.simulator.IFlyable;
 import wtc.jhb.school.tower.WeatherTower;
 
-public class Balloon implements IFlyable {
+public class Balloon  {
     private WeatherTower weatherTower;
 
     Balloon(String name, Coordinates coordinates) {
@@ -14,7 +14,7 @@ public class Balloon implements IFlyable {
 
     }
 
-    protected void registerTower(WeatherTower weatherTower) {
+//    protected void registerTower(WeatherTower weatherTower) {
 
-    }
+//    }
 }
