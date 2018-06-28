@@ -28,7 +28,7 @@ public class Simulator {
 
         AircraftFactory aircraftFactory = new AircraftFactory();
         WeatherTower weatherTower = new WeatherTower();
-        WeatherProvider weatherProvider = WeatherProvider.getProvider();
+        //WeatherProvider weatherProvider = WeatherProvider.getProvider();
         //read file_ {
         String scenarioFile = args[0];
         //File to create_

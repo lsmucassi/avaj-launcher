@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-# Progress bar by Adriano Pinaffo
-# Available at https://github.com/adriano-pinaffo/progressbar.sh
+# Progress bar by lmucassi
+#
 # Inspired on work by Edouard Lopez (https://github.com/edouard-lopez/progress-bar.sh)
 # Version 1.0
-# Date April, 28th 2017
+#
 
 function error {
   echo "Usage: $0 [SECONDS]"
@@ -31,6 +31,9 @@ skip=$(($duration/($duration-$increment)))
 curr_bar=0
 prev_bar=
 echo "\033[32mCompiling ...\033[00m \n"
+#compile java
+javac -d . src/wtc/jhb/school/**/*.java
+
 for (( elapsed=1; elapsed<=$duration; elapsed++ ))
 do
 # Elapsed
@@ -61,4 +64,8 @@ prev_bar=$curr_bar
   printf "\r"
 done
 printf "\n"
+echo "\nDone, now run: "
+echo "java -cp . wtc.jhb.school.simulator.Simulator src/wtc/jhb/school/scenarios.txt"
+echo "And then cat: simulation.txt"
 exit 0
+
