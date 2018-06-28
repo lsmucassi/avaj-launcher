@@ -8,19 +8,27 @@ package wtc.jhb.school.weather;
 import wtc.jhb.school.simulator.Aircraft.Coordinates;
 
 public class WeatherProvider {
-    private static WeatherProvider weatherProvider;
-    private static String[] weather;
+    private static WeatherProvider weatherProvider = new WeatherProvider();
+    private static String[] weather = {
+            "SUN", "FOG", "SNOW", "RAIN"
+    };
 
-    private WeatherProvider() {
+    private WeatherProvider() {}
 
+    public static WeatherProvider getProvider() {
+       return WeatherProvider.weatherProvider;
     }
 
-//    public static WeatherProvider getProvider() {
-//       WeatherProvider gtProvider = new WeatherProvider("linda", 89989);
-//       return gtProvider;
-//    }
+    private int byteToInt(byte[] bi) {
+        int val = 0;
+        for (int i = 0; i < bi.length; i++) {
+            val = (val << 8 | bi[i]);
+        }
+        return val;
+    }
 
     public String getCurrentWeather(Coordinates coordinates) {
-        return "currWeather";
+        int sed = coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight();
+        return weather[sed % 4];
     }
 }

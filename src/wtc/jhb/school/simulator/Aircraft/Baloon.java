@@ -7,7 +7,6 @@ package wtc.jhb.school.simulator.Aircraft;
 
 import wtc.jhb.school.simulator.Simulator;
 import wtc.jhb.school.weather.WeatherTower;
-
 import java.util.HashMap;
 
 public class Baloon extends Aircraft implements IFlyable {

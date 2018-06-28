@@ -51,8 +51,8 @@ public class Simulator {
 
         //verify scenario file_
         try {
-            FileInputStream fileInputStream = new FileInputStream(scenarioFile);
-            BufferedReader breader = new BufferedReader(new FileInputStream(fileInputStream));
+            FileInputStream fstream = new FileInputStream(scenarioFile);
+            BufferedReader breader = new BufferedReader(new InputStreamReader(fstream));
             String fLine;
             int line = 1;
             String[] splits;
@@ -79,7 +79,7 @@ public class Simulator {
                     try {
                         aircraftFactory.newAircraft(splits[0], splits[1], Integer.parseInt(splits[2]),
                                 Integer.parseInt(splits[3]),
-                                Integer.parseInt(splits[4]).registerTower(weatherTower));
+                                Integer.parseInt(splits[4])).registerTower(weatherTower);
                     } catch (NumberFormatException e) {
                         System.out.println("Error: [" + line + "] - parameter 3 to 5 must be an integer");
                         return ;

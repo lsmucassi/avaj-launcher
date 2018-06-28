@@ -7,15 +7,15 @@ package wtc.jhb.school.weather;
 
 
 import wtc.jhb.school.simulator.Aircraft.Coordinates;
+import wtc.jhb.school.tower.Tower;
 
-public class WeatherTower {
+public class WeatherTower extends Tower {
 
     public String getWeather(Coordinates coordinates) {
-        return "this->weather(random)";
+        return WeatherProvider.getProvider().getCurrentWeather(coordinates);
     }
 
     void changeWeather() {
-
+        this.conditionChanged();
     }
-
 }
