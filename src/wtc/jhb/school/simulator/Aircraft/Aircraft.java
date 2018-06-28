@@ -1,4 +1,9 @@
 package wtc.jhb.school.simulator.Aircraft;
+/*
+    Author  : lmucassi
+    Project : Avaj-launcher
+    School  : wethinkcode.co.za
+ */
 
 public class Aircraft {
     protected long id;
@@ -7,10 +12,12 @@ public class Aircraft {
     private static long idCounter;
 
     protected Aircraft(String name, Coordinates coordinates) {
-
+        this.id = nextId();
+        this.name = name;
+        this.coordinates = coordinates;
     }
 
     private long nextId() {
-        return 0;
+        return ++(Aircraft.idCounter);
     }
 }

@@ -1,4 +1,9 @@
 package wtc.jhb.school.simulator.Aircraft;
+/*
+    Author  : lmucassi
+    Project : Avaj-launcher
+    School  : wethinkcode.co.za
+ */
 
 public class Coordinates {
     int longitude;

@@ -1,4 +1,10 @@
-package wtc.jhb.school.tower;
+package wtc.jhb.school.weather;
+/*
+    Author  : lmucassi
+    Project : Avaj-launcher
+    School  : wethinkcode.co.za
+ */
+
 
 import wtc.jhb.school.simulator.Aircraft.Coordinates;
 

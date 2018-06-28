@@ -1,7 +1,11 @@
 package wtc.jhb.school.simulator.Aircraft;
+/*
+    Author  : lmucassi
+    Project : Avaj-launcher
+    School  : wethinkcode.co.za
+ */
 
-import wtc.jhb.school.simulator.IFlyable;
-import wtc.jhb.school.tower.WeatherTower;
+import wtc.jhb.school.weather.WeatherTower;
 
 
 public class Helicopter implements IFlyable {
