@@ -1,1 +1,0 @@
-rm simulation.txt
